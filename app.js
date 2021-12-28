@@ -66,17 +66,6 @@ app.post("/success", function(req,res){
     res.redirect("/");
 });
 
-
-
-// mailchimp api key
-// 190d21abf6b19f943bd5b6423f6a16f3-us20 
-
-// server
-// us20
-
-// list id
-// fa5b3f6dbf 
-
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){ //listen locally or at port asigned by heroku
     console.log('Server started on port 3000');
 })
