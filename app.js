@@ -58,6 +58,16 @@ app.post('/', function (req,res){
     // cnsole.log(firstName, lastName, email);
 });
 
+app.post("/failure", function(req,res){
+    res.redirect("/");
+});
+
+app.post("/success", function(req,res){
+    res.redirect("/");
+});
+
+
+
 // mailchimp api key
 // 190d21abf6b19f943bd5b6423f6a16f3-us20 
 
