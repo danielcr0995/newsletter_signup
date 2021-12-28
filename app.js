@@ -43,9 +43,9 @@ app.post('/', function (req,res){
     const request = https.request(url, options, function(response){
 
         if (response.statusCode===200){
-            res.send('subscribed');
+            res.sendFile(__dirname +'/succes.html');
         }else{
-            res.send('try again');
+            res.sendFile(__dirname +'/failure.html');
         }
         response.on('data', function(data){
             console.log(JSON.parse(data));
